@@ -1,0 +1,6 @@
+.DS_Store
+.editorconfig
+.idea
+.vscode
+*.log
+node_modules/
