@@ -1,7 +1,7 @@
 .profile {
   display: flex;
   padding: 34px 0 20px;
-  border-bottom: 1px rgba(33,33,33,.4) solid;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .profile__avatar {
@@ -17,10 +17,21 @@
 }
 
 .profile__description {
-  margin: 12px 0 0 ;
+  margin: 12px 0 0;
 }
 .profile__edit-button {
   margin-top: auto;
+  opacity: 40%;
+  border: none;
+  background: transparent;
+  width: 21vh;
+  height: 3.3vh;
+  padding: 0;
+  transition: opacity 0.5s;
+}
+.profile__edit-button:hover {
+  cursor: pointer;
+  opacity: 100%;
 }
 
 .profile__plus-button {
