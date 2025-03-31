@@ -8,16 +8,14 @@
   align-content: baseline;
   margin: 0;
   padding-top: 12px;
-  z-index: 1;
 }
 
 .card__image {
   height: 413px;
   width: 413px;
   object-fit: cover;
-  border-image: round;
   display: block;
-  z-index: 0;
+  border-radius: 6px;
 }
 
 .card__title {
@@ -32,12 +30,14 @@
 
 .card__like-button {
   background-image: url(../images/heart.png);
+  background-position: center;
   border: none;
   background: transparent;
   width: 23px;
   height: 20px;
   opacity: 40%;
   padding: 0;
+  margin: 0;
   transition: opacity 0.5s;
 }
 .card__like-button:hover {

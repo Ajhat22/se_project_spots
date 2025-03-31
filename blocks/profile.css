@@ -11,6 +11,7 @@
 .profile__column {
   display: flex;
   flex-direction: column;
+  
 }
 .profile__title {
   margin: 0;
@@ -36,4 +37,7 @@
 
 .profile__plus-button {
   margin-left: auto;
+  width: 157px;
+  height: 52px;
+  
 }
