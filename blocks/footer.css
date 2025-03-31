@@ -3,4 +3,9 @@
   justify-content: center;
   padding-top: 60px;
   margin: 0 auto;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }

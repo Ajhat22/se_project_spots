@@ -32,7 +32,7 @@
   background-image: url(../images/heart.png);
   background-position: center;
   border: none;
-  background: transparent;
+  background-color: transparent;
   width: 23px;
   height: 20px;
   opacity: 40%;
