@@ -3,9 +3,9 @@
   justify-content: center;
   padding-top: 60px;
   margin: 0 auto;
-  font-family: "Poppins";
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
+  line-height: 1.;
   letter-spacing: 0%;
 }
