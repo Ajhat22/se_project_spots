@@ -44,3 +44,9 @@
   cursor: pointer;
   opacity: 100%;
 }
+
+@media screen and (max-width: 627px) {
+  .card__image {
+    width: 288px;
+  }
+}

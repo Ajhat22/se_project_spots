@@ -29,7 +29,7 @@
 .profile__description {
   margin: 12px 0 0;
   max-width: 420px;
-  max-height: 48px;
+  height: 48px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: medium;
   opacity: 70%;
@@ -42,9 +42,10 @@
   opacity: 40%;
   border: none;
   background: transparent;
-  width: 13vh;
-  height: 3.3vh;
+  width: 114px;
+  height: 16px;
   padding: 0;
+  align-self: flex-start;
   transition: opacity 0.5s;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: medium;
@@ -82,9 +83,10 @@
     max-width: 288px;
     align-items: center;
     text-align: center;
+
     padding-top: 20px;
-    width: 288;
-    height: 114;
+    width: 288px;
+
     gap: 6px;
     justify-content: center;
   }
@@ -98,6 +100,8 @@
 
   .profile__title {
     font-size: 20px;
+    width: 288px;
+    height: 60px;
   }
 
   .profile__column {
@@ -107,16 +111,20 @@
   .profile__description {
     margin: 0 0 32px;
     font-size: 16px;
+    width: 288;
+    height: 48;
   }
 
   .profile__plus-button {
     margin: 0;
+    width: 100%;
   }
 
   .profile__edit-button {
-    margin: 0;
-    width: 84px;
+    margin: auto 0;
+    width: 120px;
     height: 16px;
-    
+    align-self: center;
+    padding-top: 32px;
   }
 }
