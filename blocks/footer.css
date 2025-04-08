@@ -3,9 +3,11 @@
   justify-content: center;
   padding-top: 60px;
   margin: 0 auto;
+  color: #212121b2;
+  opacity: 70%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.;
+  line-height: 1;
   letter-spacing: 0%;
 }

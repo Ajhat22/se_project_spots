@@ -1,6 +1,6 @@
 .profile {
   display: flex;
-  align-items: end;
+
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
@@ -17,11 +17,14 @@
 }
 .profile__title {
   margin: 0;
+  color: #212121;
   max-width: 420px;
-  height: 90px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: medium;
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   font-size: 32px;
   line-height: 1;
 }
@@ -32,23 +35,26 @@
   height: 48px;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: medium;
-  opacity: 70%;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  color: #212121;
+  opacity: 70%;
 }
 .profile__edit-button {
+  gap: 18px;
   margin-top: auto;
-  opacity: 40%;
+  opacity: 70%;
   border: none;
   background: transparent;
   width: 114px;
   height: 16px;
   padding: 0;
-  align-self: flex-start;
   transition: opacity 0.5s;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
-  font-style: medium;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -60,9 +66,11 @@
 
 .profile__plus-button {
   margin-left: auto;
+  align-self: self-end;
   width: 157px;
   height: 52px;
   border-radius: 8px;
+  border: none;
   background-color: #212121;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: medium;
@@ -83,11 +91,7 @@
     max-width: 288px;
     align-items: center;
     text-align: center;
-
     padding-top: 20px;
-    width: 288px;
-
-    gap: 6px;
     justify-content: center;
   }
 
@@ -100,8 +104,7 @@
 
   .profile__title {
     font-size: 20px;
-    width: 288px;
-    height: 60px;
+    max-width: 288px;
   }
 
   .profile__column {
@@ -111,8 +114,8 @@
   .profile__description {
     margin: 0 0 32px;
     font-size: 16px;
-    width: 288;
-    height: 48;
+    max-width: 288px;
+   
   }
 
   .profile__plus-button {
@@ -125,6 +128,6 @@
     width: 120px;
     height: 16px;
     align-self: center;
-    padding-top: 32px;
+   margin-top: 32px;
   }
 }
