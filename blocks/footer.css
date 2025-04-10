@@ -1,7 +1,7 @@
 .footer__copyright {
   display: flex;
   justify-content: center;
-  padding-top: 60px;
+  padding-top: -60px;
   margin: 0 auto;
   color: #212121b2;
   opacity: 70%;
