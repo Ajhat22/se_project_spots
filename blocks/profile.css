@@ -1,6 +1,5 @@
 .profile {
   display: flex;
-
   padding: 34px 0 20px;
   border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
@@ -58,6 +57,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  color: #212121;
 }
 .profile__edit-button:hover {
   cursor: pointer;
@@ -115,7 +115,6 @@
     margin: 0 0 32px;
     font-size: 16px;
     max-width: 288px;
-   
   }
 
   .profile__plus-button {
@@ -128,6 +127,6 @@
     width: 120px;
     height: 16px;
     align-self: center;
-   margin-top: 32px;
+    margin-top: 32px;
   }
 }
