@@ -5,7 +5,6 @@
 .card__content {
   display: flex;
   justify-content: space-between;
-  align-content: baseline;
   margin: 0;
   padding-top: 12px;
 }
@@ -21,9 +20,13 @@
 .card__title {
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 500;/*please look at the note on page*/
   font-size: 20px;
   line-height: 1.2;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  color: #212121;
 }
 
 .card__like-button {
@@ -46,13 +49,15 @@
 @media screen and (max-width: 627px) {
   .card__image {
     width: 288px;
+    height: 288px;
   }
   .card__title {
     font-size: 16px;
+    max-width: 95px;
+    height: 18px;
   }
   .card__like-button {
-    width: 22px;
-    height: 18px;
-    overflow: cover;
+    width: 32px;
+    height: 20px;
   }
 }
