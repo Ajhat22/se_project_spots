@@ -19,5 +19,10 @@
     grid-template-columns: repeat(auto-fit, 288px);
     align-items: center;
     row-gap: 20px;
+    padding-bottom: 30px;
+
+  }
+  .cards {
+    padding-top: 16px;
   }
 }

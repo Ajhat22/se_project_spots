@@ -20,13 +20,14 @@
 .card__title {
   margin: 0;
   padding: 0;
-  font-weight: 500;/*please look at the note on page*/
+  font-weight: 500; /*please look at the note on page*/
   font-size: 20px;
   line-height: 1.2;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   color: #212121;
+  max-width: 353px;
 }
 
 .card__like-button {
@@ -53,11 +54,11 @@
   }
   .card__title {
     font-size: 16px;
-    max-width: 95px;
+    max-width: 195px;
     height: 18px;
   }
   .card__like-button {
-    width: 32px;
+    width: 25px;
     height: 20px;
   }
 }
