@@ -26,6 +26,7 @@
   -webkit-box-orient: vertical;
   font-size: 32px;
   line-height: 1;
+  overlay: hidden;
 }
 
 .profile__description {
@@ -40,6 +41,7 @@
   -webkit-box-orient: vertical;
   color: #212121;
   opacity: 70%;
+  overlay: hidden;
 }
 .profile__edit-button {
   margin-top: auto;
@@ -107,7 +109,6 @@
 
   .profile__description {
     margin: 0 0 32px;
-    font-size: 16px;
     max-width: 288px;
   }
 
