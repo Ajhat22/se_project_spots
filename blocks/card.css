@@ -41,7 +41,7 @@
   padding: 0;
   margin: 0;
   transition: opacity 0.5s;
-  background: no-repeat;
+  background-repeat: no-repeat;
 }
 .card__like-button:hover {
   cursor: pointer;
