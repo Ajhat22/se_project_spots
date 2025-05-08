@@ -1,5 +1,10 @@
 .modal {
   visibility: hidden;
+
+}
+
+.modal_is-opened {
+  visibility: visible;
   background-color: #00000080;
   position: fixed;
   top: 0;
@@ -9,10 +14,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.modal_is-opened {
-  visibility: visible;
 }
 
 .modal__content {
@@ -36,6 +37,7 @@
   border: none;
   image-orientation: from-image;
   transition: opacity 1.5s;
+ 
 }
 .modal__close-button:hover {
   opacity: 50%;
@@ -109,5 +111,9 @@
     max-width: 476px;
     min-width: 288px;
     margin: 12px, 24px, 12px;
+  }
+  .modal__button-submit {
+    width:100%;
+
   }
 }
