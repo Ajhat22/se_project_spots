@@ -116,9 +116,10 @@
   .modal__title {
     margin-left: 12px;
     max-width: 169px;
-    margin: 28px 24px;
-    margin-bottom: 12px;
+    margin: 28px 48px;
+    margin-bottom: 0;
   }
+
   .modal__input {
     max-width: 476px;
     min-width: 188px;
@@ -138,7 +139,11 @@
 
   .modal__decor-text {
     margin: 0;
-    padding: 8px 24px;
+    padding: 8px 12px;
+  }
+
+  .modal__decor-text:first-child {
+    padding-top: 0;
   }
 
   .modal__close-button {
