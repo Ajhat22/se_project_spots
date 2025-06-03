@@ -22,19 +22,21 @@ const postModal = document.querySelector("#new-post-modal");
 
 const postCloseButton = postModal.querySelector(".modal__close-button");
 
-
 const postSave = postModal.querySelector(".modal__form");
 
-const editpostnameI = postModal.querySelector("#post-name-input");
+const editPostnameI = postModal.querySelector("#post-name-input");
 
 const editpostdescriptionI = postModal.querySelector("#post-description-input");
-
 
 // constants for name holders
 
 const nameHolder = document.querySelector(".profile__title");
 
 const descriptionHolder = document.querySelector(".profile__description");
+
+const titleHolder = document.querySelector(".card__image");
+
+const descriptionPHolder = document.querySelector(".card__title");
 
 //constants for submitions extra?
 
@@ -50,14 +52,14 @@ profileCloseButton.addEventListener("click", function () {
   profileModal.classList.remove("modal_is-opened");
 });
 
-function handlePROFILESave(evt){
-  console.log ("profile saving");
+function handlePROFILESave(evt) {
+  console.log("profile saving");
   nameHolder.textContent = editProfilenameI.value;
-  descriptionHolder.textContent= editProfiledescriptionI.value;
-  evt.preventDefault(); 
+  descriptionHolder.textContent = editProfiledescriptionI.value;
+  evt.preventDefault();
   profileModal.classList.remove("modal_is-opened");
- console.log(nameHolder);
- console.log(descriptionHolder);
+  console.log(nameHolder);
+  console.log(descriptionHolder);
 }
 
 profileSave.addEventListener("submit", handlePROFILESave);
@@ -65,22 +67,23 @@ profileSave.addEventListener("submit", handlePROFILESave);
 //events for new post
 
 postButton.addEventListener("click", function () {
- postModal.classList.add("modal_is-opened");
+  editPostnameI.value = titleHolderHolder.textContent;
+  editpostdescriptionI.value = descriptionPHolder.textContent;
+  postModal.classList.add("modal_is-opened");
 });
 
 postCloseButton.addEventListener("click", function () {
   postModal.classList.remove("modal_is-opened");
 });
 
-function handlePROFILESave(evt){
-  console.log ("profile saving");
-  nameHolder.textContent = editProfilenameI.value;
-  descriptionHolder.textContent= editProfiledescriptionI.value;
-  evt.preventDefault(); 
+function handlePOSTSave(evt) {
+  console.log("post saving");
+  titleHolder.value = editPostnameI.textContext;
+  descriptionPHolder.textContent = editpostdescriptionI.textContent;
+  evt.preventDefault();
   profileModal.classList.remove("modal_is-opened");
- console.log(nameHolder);
- console.log(descriptionHolder);
+  console.log(titleHolder);
+  console.log(descriptionPHolder);
 }
 
-
-postSave.addEventListener("submit", handlePROFILESave);
+postSave.addEventListener("submit", handlePOSTSave);
