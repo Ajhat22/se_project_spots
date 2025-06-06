@@ -101,16 +101,17 @@
 
 @media screen and (max-width: 627px) {
   .modal {
-    max-width: 660px;
-    height: 100%;
+    min-width: 300px;
+    min-height: 336px;
     flex-direction: column;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: 12px 0 12px;
+    margin: auto 12px 0;
     justify-content: center;
     align-items: center;
+    align-content: center;
     display: flex;
   }
   .modal__title {
@@ -121,14 +122,15 @@
   }
 
   .modal__input {
-    max-width: 476px;
-    min-width: 188px;
+    width: 100%;
+    max-width: 627px;
     margin: 12px 34px 12px;
     margin-top: 0;
+    
   }
   .modal__button-submit {
     width: 100%;
-    max-width: 483px;
+    max-width: 276px;
     align-self: center;
     justify-content: center;
     align-items: center;
