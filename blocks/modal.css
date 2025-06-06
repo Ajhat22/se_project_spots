@@ -101,7 +101,7 @@
 
 @media screen and (max-width: 627px) {
   .modal {
-    width: 100%;
+    max-width: 660px;
     height: 100%;
     flex-direction: column;
     top: 0;

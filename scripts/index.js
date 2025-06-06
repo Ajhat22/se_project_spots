@@ -38,7 +38,8 @@ const titleHolder = document.querySelector(".card__image");
 
 const descriptionPHolder = document.querySelector(".card__title");
 
-//constants for submitions extra?
+//i realized i needed it to clone so this is const to clone for new post 
+
 
 //events for profile
 
@@ -67,7 +68,7 @@ profileSave.addEventListener("submit", handlePROFILESave);
 //events for new post
 
 postButton.addEventListener("click", function () {
-  editPostnameI.value = titleHolderHolder.textContent;
+  editPostnameI.value = titleHolder.textContent;
   editpostdescriptionI.value = descriptionPHolder.textContent;
   postModal.classList.add("modal_is-opened");
 });
