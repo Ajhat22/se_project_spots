@@ -38,8 +38,7 @@ const titleHolder = document.querySelector(".card__image");
 
 const descriptionPHolder = document.querySelector(".card__title");
 
-//i realized i needed it to clone so this is const to clone for new post 
-
+//i realized i needed it to clone so this is const to clone for new post
 
 //events for profile
 
