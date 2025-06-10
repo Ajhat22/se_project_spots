@@ -47,7 +47,7 @@
   cursor: pointer;
   opacity: 100%;
 }
-/* IF I CHANGE THE VIEWPOINT IT DESTROYS THE PROJECT */
+/* IF I CHANGE THE VIEWPOINT IT DESTROYS THE PROJECT  and i cant do that atm because i need to fix this input issue*/
 @media screen and (max-width: 627px) {
   .card__image {
     width: 288px;
