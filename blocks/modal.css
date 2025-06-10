@@ -58,13 +58,13 @@
 
 .modal__form-text {
   margin: 32px 50px 6px;
-  color: #212121b2;
+  color: #212121;
 }
 
 .modal__input {
   display: block;
+  left: 50px;
   position: relative;
-  margin-left: 50px;
   max-width: 630px;
   width: 100%;
   height: 52px;
@@ -73,7 +73,7 @@
   font-size: 20px;
   border-radius: 8px;
   text-align: left;
-  color: #21212166;
+  color: #212121b2;
 }
 
 .modal__input::placeholder {
@@ -119,14 +119,19 @@
     margin-left: 12px;
     max-width: 169px;
     margin: 14px 12px;
+    font-weight: 500;
+    font-size: 20px;
   }
 
   .modal__input {
+    margin: 0;
     width: 100%;
-    max-width: 627px;
+    max-width: 276px;
     position: relative;
-    margin-right: -12px;
+    left: 12px;
     margin-top: 0;
+    font-size: 16px;
+    font-weight: 500;
   }
   .modal__button-submit {
     width: 100%;
@@ -140,17 +145,17 @@
     padding: 0;
   }
 
-  .modal__decor-text {
+  .modal__form-text {
     margin: 0;
     padding: 8px 12px;
   }
 
-  .modal__decor-text:first-child {
+  .modal__form-text:first-child {
     padding-top: 0;
   }
 
   .modal__close-button {
-    margin: 12px 12px;
+    margin: 0;
     top: 12px;
     right: 12px;
   }
@@ -158,6 +163,8 @@
     width: 100%;
     height: 50%;
     position: relative;
+    max-height: 336px;
+    max-width: 300px;
   }
 
   .modal__form-text {
