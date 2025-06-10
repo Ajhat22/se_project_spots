@@ -99,7 +99,7 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 627px) {
   .modal {
     min-width: 300px;
     min-height: 336px;

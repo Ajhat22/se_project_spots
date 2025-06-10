@@ -47,8 +47,8 @@
   cursor: pointer;
   opacity: 100%;
 }
-
-@media screen and (max-width: 320px) {
+/* IF I CHANGE THE VIEWPOINT IT DESTROYS THE PROJECT */
+@media screen and (max-width: 627px) {
   .card__image {
     width: 288px;
     height: 288px;
