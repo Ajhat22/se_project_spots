@@ -116,9 +116,11 @@
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__content">
-          <button type="reset" class="modal__close-button">
-            <img src="images/x.svg" alt=" exit button for profile" />
-          </button>
+          <button
+            type="button"
+            class="modal__close-button"
+            aria-label="the unsavable close button to edit your profile."
+          ></button>
           <h2 class="modal__title">edit profile</h2>
           <form class="modal__form">
             <label for="profile-name-input" class="modal__form-text"
@@ -129,6 +131,7 @@
               type="text"
               class="modal__input"
               placeholder=" a place for your name"
+              required
             />
             <label for="profile-description-input" class="modal__form-text"
               >description</label
@@ -138,16 +141,25 @@
               type="text"
               class="modal__input"
               placeholder="a place for a description of you"
+              required
             />
-            <button type="submit" class="modal__button-submit">save</button>
+            <button
+              type="submit"
+              class="modal__button-submit"
+              aria-label="this is the save button"
+            >
+              save
+            </button>
           </form>
         </div>
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__content">
-          <button type="reset" class="modal__close-button">
-            <img src="images/x.svg" alt=" exit button for profile" />
-          </button>
+          <button
+            type="reset"
+            class="modal__close-button"
+            aria-label="the unsavable close button for posting."
+          ></button>
           <h2 class="modal__title">Image link</h2>
           <form class="modal__form">
             <label for="post-name-input" class="modal__form-text"
@@ -158,6 +170,7 @@
               type="text"
               class="modal__input"
               placeholder="link for image"
+              required
             />
             <label for="post-description-input" class="modal__form-text">
               Caption</label
@@ -167,8 +180,15 @@
               type="text"
               class="modal__input"
               placeholder="description for Post"
+              required
             />
-            <button type="submit" class="modal__button-submit">save</button>
+            <button
+              type="submit"
+              class="modal__button-submit"
+              aria-label="this is the save button "
+            >
+              save
+            </button>
           </form>
         </div>
       </div>
