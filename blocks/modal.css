@@ -31,13 +31,14 @@
 }
 
 .modal__close-button {
+  padding: 0;
   position: absolute;
-  background-image: url(/images/x.svg);
+  background-image: url(../images/x.svg);
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
-  background: none;
+  background: transparent;
   background-position: center;
   border: none;
   image-orientation: from-image;
@@ -50,10 +51,8 @@
 }
 .modal__title {
   margin: 0;
-  padding-bottom: 36px;
   padding-top: 0;
-  height: 32px;
-  width: 269px;
+  max-width: 269px;
   margin-bottom: 0;
   font-weight: 500;
   line-height: 100%;
@@ -76,11 +75,12 @@
 }
 
 .modal__input {
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  line-height: 1;
   display: block;
   max-width: 630px;
   width: 100%;
-  height: 52px;
-  padding: 12px 0 16px;
+  padding: 16px 12px;
   font-weight: 500;
   font-size: 20px;
   border-radius: 8px;
@@ -115,11 +115,10 @@
 
 @media screen and (max-width: 627px) {
   .modal {
-    min-width: 300px;
+    max-width: 300px;
   }
   .modal__title {
-    width: 169px;
-    padding-bottom: 24px;
+    max-width: 169px;
     font-size: 20px;
   }
 
@@ -129,28 +128,19 @@
   .modal__button-submit {
     width: 100%;
     min-width: 276px;
-    margin: 12px 0px;
+    margin: 24px 0 0;
   }
 
   .modal__close-button {
-    margin-right: 12px;
-    position-anchor: absolute;
-    top: 12px;
-    right: 28px;
-    width: 22px;
-    height: 22px;
+    top: 22px;
+    right: 12px;
   }
   .modal__content {
-    padding: 12px 12px;
+    padding: 22px 12px 12px;
+    max-width: 627px;
   }
 
   .modal__form-text {
-    margin: 12px 8px;
-    min-width: 83px;
+    max-width: 83px;
   }
 }
-
-/* 
-Remove marking left from the inputs
-modal width - media query small screens
-*/

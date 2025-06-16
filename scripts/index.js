@@ -59,8 +59,6 @@ function handlePofileSave(evt) {
   descriptionHolder.textContent = editProfiledescriptionInput.value;
   evt.preventDefault();
   profileModal.classList.remove("modal_is-opened");
-  console.log(nameHolder);
-  console.log(descriptionHolder);
 }
 
 profileSave.addEventListener("submit", handlePofileSave);
@@ -76,12 +74,10 @@ postCloseButton.addEventListener("click", function () {
 });
 
 function handlePostSave(evt) {
-  titleHolder.value = editPostnameInput.textContext;
-  descriptionPostHolder.textContent = editpostdescriptionInput.textContent;
   evt.preventDefault();
-  console.log(editPostnameInput.textContext);
-  console.log(editpostdescriptionInput.textContent);
-  profileModal.classList.remove("modal_is-opened");
+  console.log(editPostnameInput.value);
+  console.log(editpostdescriptionInput.value);
+  postModal.classList.remove("modal_is-opened");
 }
 
 postSave.addEventListener("submit", handlePostSave);
