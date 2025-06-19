@@ -38,7 +38,7 @@
   right: 50px;
   width: 40px;
   height: 40px;
-  background: transparent;
+  color-background: transparent;
   background-position: center;
   border: none;
   image-orientation: from-image;
@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 627px) {
   .modal {
-    min-width: 300px; 
+    min-width: 300px;
   }
   .modal__title {
     max-width: 169px;
