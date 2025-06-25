@@ -60,22 +60,31 @@ const descriptionHolder = document.querySelector(".profile__description");
 //i realized i needed it to clone so this is const to clone for new post
 
 //events for profile
+function openModal(modal){
+  modal.classList.add("modal_is-opened");
+  
+}
+
+function closedModal(modal){
+  modal.classList.remove("modal_is-opened");
+  
+}
 
 editProfileButton.addEventListener("click", function () {
   editProfilenameInput.value = nameHolder.textContent;
   editProfiledescriptionInput.value = descriptionHolder.textContent;
-  profileModal.classList.add("modal_is-opened");
+  openModal(profileModal);
 });
 
 profileCloseButton.addEventListener("click", function () {
-  profileModal.classList.remove("modal_is-opened");
+  closedModal(profileModal);
 });
 
 function handlePofileSave(evt) {
   nameHolder.textContent = editProfilenameInput.value;
   descriptionHolder.textContent = editProfiledescriptionInput.value;
   evt.preventDefault();
-  profileModal.classList.remove("modal_is-opened");
+  closedModal(profileModal);
 }
 
 profileSave.addEventListener("submit", handlePofileSave);
@@ -83,20 +92,19 @@ profileSave.addEventListener("submit", handlePofileSave);
 //events for new post
 
 postButton.addEventListener("click", function () {
-  postModal.classList.add("modal_is-opened");
+  openModal(postModal);
 });
 
 postCloseButton.addEventListener("click", function () {
-  postModal.classList.remove("modal_is-opened");
-});
+ closedModal(postModal)
+ });
 
 function handlePostSave(evt) {
   evt.preventDefault();
   console.log(editPostnameInput.value);
   console.log(editpostdescriptionInput.value);
-  postModal.classList.remove("modal_is-opened");
+  closedModal(postModal);
 }
-
 postSave.addEventListener("submit", handlePostSave);
 
 
