@@ -47,17 +47,43 @@ const editpostdescriptionInput = postModal.querySelector(
   "#post-description-input"
 );
 
-// constants for name holders
+// constants for name holders and card maaker
 
 const nameHolder = document.querySelector(".profile__title");
 
 const descriptionHolder = document.querySelector(".profile__description");
 
-//const titleHolder = document.querySelector(".card__image");
+const cardTemplate = document.querySelector("#card-Template");
 
-//const descriptionPHolder = document.querySelector(".card__title");
+const cardsList = document.querySelector(".cards__list");
 
-//i realized i needed it to clone so this is const to clone for new post
+function getCardElement(data){
+ const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
+ const cardElementTitle = cardElement.querySelector(".card__title");
+ const cardElementImage = cardElement.querySelector(".card__image");
+ 
+  cardElementImage.src = data.link;
+  cardElementTitle.textContent = data.name;
+  cardElementImage.alt = data.name;
+ 
+ 
+  const cardHeartButton = cardElement.querySelector(".card__like-button");
+  cardHeartButton.addEventListener("click",() =>{
+    cardHeartButton.classList.toggle(".card__like-button_active");
+  });
+
+
+   const cardTrashButton = cardElement.querySelector(".card__trash-button");
+   cardTrashButton.addEventListener("click",() =>{
+    cardElement.remove();
+    cardElement = null;
+  });
+ return cardElement;
+
+}
+
+
+
 
 //events for profile
 function openModal(modal){
@@ -101,8 +127,11 @@ postCloseButton.addEventListener("click", function () {
 
 function handlePostSave(evt) {
   evt.preventDefault();
-  console.log(editPostnameInput.value);
-  console.log(editpostdescriptionInput.value);
+
+  const newCard = ({name:editPostnameInput.value,
+    link: editpostdescriptionInput.value,})
+  const getCard = getCardElement(newCard);
+  cardsList.prepend(cardElement);
   closedModal(postModal);
 }
 postSave.addEventListener("submit", handlePostSave);
@@ -112,6 +141,6 @@ postSave.addEventListener("submit", handlePostSave);
 //info for card arrays
 
 initialCards.forEach(function (item) {
-console.log(item.name);
-console.log(item.link);
+const getCard = getCardElement(item);
+cardsList.append(getCard);
 });
