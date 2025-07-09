@@ -61,6 +61,25 @@ const cardTemplate = document.querySelector("#card-Template");
 
 const cardsList = document.querySelector(".cards__list");
 
+
+//constants for images
+
+const imgPrev = document.querySelector("mag-imager-modal");
+
+const imgClose = imgPrev.querySelector(".modal__close-button"); 
+
+const imgCaption = imgPrev.querySelector(".modal__caption");
+
+const imgPrevHolder = imgPrev.querySelector(".madal__image");
+
+
+
+
+
+
+
+
+//function for card collection
 function getCardElement(data){
  const cardElement = cardTemplate.content.querySelector(".card").cloneNode(true);
  const cardElementTitle = cardElement.querySelector(".card__title");
@@ -82,6 +101,12 @@ function getCardElement(data){
     cardElement.remove();
     cardElement = null;
   });
+  cardElementImage.addEventListener ("click", () =>{
+    imgPrevHolder.src = data.link;
+    imgCaption.textContent = data.name;
+    imgPrevHolder.alt = data.name;
+    openModal(imgPrev);
+  } )
  return cardElement;
 
 }
@@ -147,4 +172,11 @@ postSave.addEventListener("submit", handlePostSave);
 initialCards.forEach(function (item) {
 const getCard = getCardElement(item);
 cardsList.append(getCard);
+});
+
+
+//info for image modal
+imgClose.addEventListener("click", function(){
+closedModal(imgPrev);
+
 });
