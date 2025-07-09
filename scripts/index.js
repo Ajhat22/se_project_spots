@@ -66,7 +66,7 @@ const cardsList = document.querySelector(".cards__list");
 
 const imgPrev = document.querySelector("mag-imager-modal");
 
-const imgClose = imgPrev.querySelector(".modal__close-button"); 
+const imgCloseButton = imgPrev.querySelector(".modal__close-button"); 
 
 const imgCaption = imgPrev.querySelector(".modal__caption");
 
@@ -176,7 +176,7 @@ cardsList.append(getCard);
 
 
 //info for image modal
-imgClose.addEventListener("click", function(){
+imgCloseButton.addEventListener("click", function(){
 closedModal(imgPrev);
 
 });
