@@ -160,7 +160,7 @@ function handlePostSave(evt) {
   const newCard = ({name:editPostnameInput.value,
     link: editpostdescriptionInput.value,})
   const getCard = getCardElement(newCard);
-  cardsList.prepend(cardElement);
+  cardsList.prepend(newCard);
   closedModal(postModal);
 }
 postSave.addEventListener("submit", handlePostSave);
@@ -171,7 +171,7 @@ postSave.addEventListener("submit", handlePostSave);
 
 initialCards.forEach(function (item) {
 const getCard = getCardElement(item);
-cardsList.append(getCard);
+cardsList.prepend(getCard);
 });
 
 
