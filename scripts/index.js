@@ -64,16 +64,13 @@ const cardsList = document.querySelector(".cards__list");
 
 //constants for images
 
-const imgPrev = document.querySelector("mag-imager-modal");
+const imgPrev = document.querySelector("#mag-imager-modal"); 
 
-const imgCloseButton = imgPrev.querySelector(".modal__close-button"); 
+const imgPrevHolder = imgPrev.querySelector(".modal__image");
+
+const imgCloseButton = imgPrev.querySelector(".modal__close-button");
 
 const imgCaption = imgPrev.querySelector(".modal__caption");
-
-const imgPrevHolder = imgPrev.querySelector(".madal__image");
-
-
-
 
 
 
@@ -106,6 +103,7 @@ function getCardElement(data){
     imgCaption.textContent = data.name;
     imgPrevHolder.alt = data.name;
     openModal(imgPrev);
+     cardElement = null;
   } )
  return cardElement;
 
