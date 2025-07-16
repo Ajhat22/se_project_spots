@@ -146,12 +146,14 @@
  bottom: -4px;
  left: 8px;
  padding: 5px, 5px;
+ text-align: center;
 }
 
 .modal__close-button_type_Img{
  top: -7px;
+ opacity:100%;
  right: -56.5px;
-  background-image:url(../images/close\ button\ 2.svg) ;
+ background-image:url(../images/close\ button\ 2.svg) ;
 } 
 
 .modal__close-button_type_Img:hover{
@@ -204,11 +206,12 @@
 
  .modal__image{
    max-width: unset;
-   max-height: 426px;
+   max-height: fit-content;
  }
 
  .modal__caption{
- font-size: 16px;
+  font-size: 16px;
+  padding: 4px 0;
  }
 }
 
