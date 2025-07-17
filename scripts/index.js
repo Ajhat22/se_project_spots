@@ -45,7 +45,7 @@ const postCloseButton = postModal.querySelector(".modal__close-button");
 
 const postSave = postModal.querySelector(".modal__form");
 
-const editPostnameInput = postModal.querySelector("#post-name-input");
+const editPostnameInput = postModal.querySelector("#post-image-input");
 
 const editpostdescriptionInput = postModal.querySelector(
   "#post-description-input"
@@ -89,21 +89,20 @@ function getCardElement(data){
  
   const cardHeartButton = cardElement.querySelector(".card__like-button");
   cardHeartButton.addEventListener("click",() =>{
-    cardHeartButton.classList.toggle(".card__like-button_active");
+    cardHeartButton.classList.toggle("card__like-button_active");
   });
 
 
    const cardTrashButton = cardElement.querySelector(".card__trash-button");
    cardTrashButton.addEventListener("click",() =>{
     cardElement.remove();
-    cardElement = null;
+
   });
   cardElementImage.addEventListener ("click", () =>{
     imgPrevHolder.src = data.link;
     imgCaption.textContent = data.name;
     imgPrevHolder.alt = data.name;
     openModal(imgPrev);
-     cardElement = null;
   } )
  return cardElement;
 
@@ -134,9 +133,9 @@ profileCloseButton.addEventListener("click", function () {
 });
 
 function handlePofileSave(evt) {
+    evt.preventDefault();
   nameHolder.textContent = editProfilenameInput.value;
-  descriptionHolder.textContent = editProfiledescriptionInput.value;
-  evt.preventDefault();
+  descriptionHolder.textContent = editProfiledescriptionInput.value;1`  q`
   closedModal(profileModal);
 }
 
@@ -154,11 +153,14 @@ postCloseButton.addEventListener("click", function () {
 
 function handlePostSave(evt) {
   evt.preventDefault();
-
-  const newCard = ({name:editPostnameInput.value,
-    link: editpostdescriptionInput.value,})
-  const getCard = getCardElement(newCard);
-  cardsList.prepend(newCard);
+  editPostnameInput.value = '';
+  editpostdescriptionInput.value = '';
+  const newCard = {
+    name: editpostdescriptionInput.value,
+    link: editPostnameInput.value,
+  };
+   const cardElement = getCardElement(newCard);
+  cardsList.prepend(cardElement);
   closedModal(postModal);
 }
 postSave.addEventListener("submit", handlePostSave);
