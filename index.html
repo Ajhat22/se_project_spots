@@ -43,20 +43,15 @@
         <section class="cards page__section">
           <ul class="cards__list">
             <template id="card-Template">
-             <li class="card">
-              <button type="button" class="card__trash-button"></button>
-              <img
-                src="#"
-               alt=""
-                class="card__image"
-              />
-              <div class="card__content">
-                <h2 class="card__title"></h2>
-                <button type="button" class="card__like-button"></button>
-              </div>
-            </li>
-           </template> 
-            
+              <li class="card">
+                <button type="button" class="card__trash-button"></button>
+                <img src="#" alt="" class="card__image" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -80,8 +75,11 @@
               type="text"
               class="modal__input"
               placeholder=" a place for your name"
+              minlength="2"
+              maxlength="40"
               required
             />
+            <span id="profile-name-input-error" class="modal__error"></span>
             <label for="profile-description-input" class="modal__form-text"
               >description</label
             >
@@ -90,8 +88,14 @@
               type="text"
               class="modal__input"
               placeholder="a place for a description of you"
+              minlength="2"
+              maxlength="200"
               required
             />
+            <span
+              id="profile-description-input-error"
+              class="modal__error"
+            ></span>
             <button
               type="submit"
               class="modal__button-submit"
@@ -121,6 +125,7 @@
               placeholder="link for image"
               required
             />
+            <span id="post-image-input-error" class="modal__error"></span>
             <label for="post-description-input" class="modal__form-text">
               Caption</label
             >
@@ -129,8 +134,11 @@
               type="text"
               class="modal__input"
               placeholder="description for Post"
+              minlength="2"
+              maxlength="30"
               required
             />
+            <span id="post-description-input-error" class="modal__error"></span>
             <button
               type="submit"
               class="modal__button-submit"
@@ -142,20 +150,18 @@
         </div>
       </div>
       <div class="modal" id="mag-imager-modal">
-         <div class="modal__img-container">
+        <div class="modal__img-container">
           <button
             type="button"
             class="modal__close-button modal__close-button_type_Img"
             aria-label="the close button for posting."
           ></button>
-          <img 
-          src="#"
-          alt="" 
-          class="modal__image">
+          <img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
         </div>
       </div>
     </div>
     <script src="./scripts/index.js" defer></script>
+    <script src="./scripts/validation.js" defer></script>
   </body>
 </html>
