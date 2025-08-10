@@ -1,4 +1,4 @@
-//basic naming for config (was done last)
+//basic naming for config (was done last a work in progress)
 const cogs = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
@@ -77,9 +77,9 @@ const setEventListeners = (formElem) => {
   });
 };
 
-const enableValadation = () => {
+const enableValadation = (config) => {
   //look here
-  const formList = Array.from(document.querySelectorAll(".modal__form"));
+  const formList = Array.from(document.querySelectorAll(config.formSelector));
 
   formList.forEach((formElem) => {
     setEventListeners(formElem);
