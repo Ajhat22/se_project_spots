@@ -17,7 +17,6 @@ const showInputError = (formElem, inputElem, errorTime) => {
 };
 
 const hideInputError = (formElem, inputElem) => {
-  //error look here
   const errorTimeID = inputElem.id + "-error";
   const errorTimeElem = formElem.querySelector(`#` + errorTimeID);
   inputElem.classList.remove(config.errorclass);
@@ -73,7 +72,6 @@ const setEventListeners = (formElem, buttonElem) => {
 };
 
 const enableValadation = (config) => {
-  //look here
   const formList = Array.from(document.querySelectorAll(config.formSelector));
 
   formList.forEach((formElem) => {
