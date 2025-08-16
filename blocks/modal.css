@@ -1,3 +1,4 @@
+/*modals :V i confuse myself i shoulda done the configs fitst*/
 .modal {
   padding: 0 10px;
   visibility: hidden;
@@ -192,7 +193,7 @@ comment out im just looking at somthing
   margin-bottom: 0;
   bottom: -4px;
   left: 8px;
-  padding: 5px, 5px;
+  padding: 5px 5px;
   text-align: center;
 }
 
