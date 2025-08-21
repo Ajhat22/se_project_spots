@@ -56,9 +56,9 @@ const postCloseButton = postModal.querySelector(".modal__close-button");
 
 const postSave = postModal.querySelector(".modal__form");
 
-const editPostnameInput = postModal.querySelector("#post-image-input");
+const editPostNameInput = postModal.querySelector("#post-image-input");
 
-const editpostdescriptionInput = postModal.querySelector(
+const editPostDescriptionInput = postModal.querySelector(
   "#post-description-input"
 );
 
@@ -85,16 +85,22 @@ const imgCloseButton = imgPrev.querySelector(".modal__close-button");
 const imgCaption = imgPrev.querySelector(".modal__caption");
 
 //overlay stuff ?
-function overlay ( modal) {
-  const overlayID = document.getElementById( modal.id + "-modal");
-  document.addEventListener("keydown", function (event) {
-    if (event.key === "Escape") {
-      overlayID.classList.remove("modal_is-opened");
-    } else (event === "click") {
-     overlayID.classList.remove("modal_is-opened");
-   }
+const modals = document.querySelectorAll(".modal");
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const activePopup = document.querySelector(".modal_is-opened");
+    closeModal(activePopup);
+  }
+}
+
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (evt) => {
+    if (evt.target.classList.contains("modal")) {
+      closeModal(modal);
+    }
   });
-};
+});
+
 //function for card collection
 function getCardElement(data) {
   const cardElement = cardTemplate.content
@@ -125,16 +131,15 @@ function getCardElement(data) {
   return cardElement;
 }
 
-
 //events for profile
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  overlay(modal);
-  };
-
+  document.addEventListener("keyup", handleEscape);
+}
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keyup", handleEscape);
 }
 
 editProfileButton.addEventListener("click", function () {
@@ -159,7 +164,7 @@ function handleProfileSave(evt) {
   closeModal(profileModal);
 }
 
-profileSave.addEventListener("submit", handlePofileSave);
+profileSave.addEventListener("submit", handleProfileSave);
 
 //events for new post
 
@@ -174,11 +179,11 @@ postCloseButton.addEventListener("click", function () {
 function handlePostSave(evt) {
   evt.preventDefault();
   pausedButton(cardSubmitButton);
-  editPostnameInput.value = resetValidation;
-  editpostdescriptionInput.value = resetValidation;
+  editPostNameInput.value = resetValidation;
+  editpostDescriptionInput.value = resetValidation;
   const newCard = {
-    name: editpostdescriptionInput.value,
-    link: editPostnameInput.value,
+    name: editPostDescriptionInput.value,
+    link: editPostNameInput.value,
   };
   const cardElement = getCardElement(newCard);
   cardsList.prepend(cardElement);

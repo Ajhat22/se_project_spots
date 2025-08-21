@@ -99,7 +99,8 @@
   color: #2121214d;
 }
 
-.modal__error {
+.modal__error_visible {
+  visibility: visible;
   color: #ff0000b2;
   display: block;
   font-weight: 500;
@@ -115,7 +116,7 @@
   backface-visibility: hidden;
   perspective: 1000px;*/
 }
-.modal__input-error:first {
+.modal__input-error:first-child {
   margin-bottom: 32px;
 }
 /* quality of life messing around if needed will 
