@@ -32,7 +32,7 @@
 .profile__description {
   margin: 12px 0 0;
   max-width: 420px;
-  height: 48px;
+  min-height: 48px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -99,6 +99,7 @@
   }
 
   .profile__title {
+    margin: 0 0 6px;
     font-size: 20px;
     max-width: 288px;
   }
@@ -119,6 +120,5 @@
 
   .profile__edit-button {
     align-self: center;
-    margin-top: 32px;
   }
 }

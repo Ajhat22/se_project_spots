@@ -148,6 +148,7 @@ editProfileButton.addEventListener("click", function () {
   resetValidation(profileModal, [
     editProfileNameInput,
     editProfileDescriptionInput,
+    config,
   ]);
   openModal(profileModal);
 });
@@ -158,7 +159,6 @@ profileCloseButton.addEventListener("click", function () {
 
 function handleProfileSave(evt) {
   evt.preventDefault();
-  pausedButton(cardSubmitButton);
   nameHolder.textContent = editProfileNameInput.value;
   descriptionHolder.textContent = editProfileDescriptionInput.value;
   closeModal(profileModal);
@@ -178,9 +178,6 @@ postCloseButton.addEventListener("click", function () {
 
 function handlePostSave(evt) {
   evt.preventDefault();
-  pausedButton(cardSubmitButton);
-  editPostNameInput.value = resetValidation;
-  editpostDescriptionInput.value = resetValidation;
   const newCard = {
     name: editPostDescriptionInput.value,
     link: editPostNameInput.value,
@@ -188,6 +185,8 @@ function handlePostSave(evt) {
   const cardElement = getCardElement(newCard);
   cardsList.prepend(cardElement);
   closeModal(postModal);
+  pausedButton(cardSubmitButton, config);
+  postSave.reset();
 }
 postSave.addEventListener("submit", handlePostSave);
 

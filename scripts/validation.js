@@ -5,13 +5,13 @@ const config = {
   submitButtonSelector: ".modal__button-submit ",
   inactiveButtonClass: "modal__button-submit_error",
   inputErrorClass: "modal__input_type_error",
-  errorClass: "modal__error_visible",
+  errorClass: "modal__error",
 };
 
 const showInputError = (formElem, inputElem, errorTime, config) => {
   const errorTimeID = inputElem.id + "-error";
   const errorTimeElem = formElem.querySelector(`#` + errorTimeID);
-  formElem.classList.add(config.errorClass);
+  errorTimeElem.classList.add(config.errorClass);
   inputElem.classList.add(config.inputErrorClass);
   errorTimeElem.textContent = errorTime;
 };
@@ -19,8 +19,8 @@ const showInputError = (formElem, inputElem, errorTime, config) => {
 const hideInputError = (formElem, inputElem, config) => {
   const errorTimeID = inputElem.id + "-error";
   const errorTimeElem = formElem.querySelector(`#` + errorTimeID);
-  inputElem.classList.remove(config.errorClass);
-  formElem.classList.remove(config.inputErrorClass);
+  errorTimeElem.classList.remove(config.errorClass);
+  inputElem.classList.remove(config.inputErrorClass);
   errorTimeElem.textContent = "";
 };
 
@@ -65,8 +65,8 @@ const setEventListeners = (formElem, config) => {
 
   inputList.forEach((inputElem) => {
     inputElem.addEventListener("input", function () {
-      checkInputValidity(formElem, inputElem);
-      toggleSubmitButton(inputList, buttonElem);
+      checkInputValidity(formElem, inputElem, config);
+      toggleSubmitButton(inputList, submitButton, config);
     });
   });
 };

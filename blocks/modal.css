@@ -99,24 +99,24 @@
   color: #2121214d;
 }
 
-.modal__error_visible {
-  visibility: visible;
+.modal__error {
   color: #ff0000b2;
   display: block;
   font-weight: 500;
   font-size: 16px;
   line-height: 110.00000000000001%;
   margin-top: 8px;
+  visibility: visible;
 }
 
-.modal__input-error {
+.modal__input_type_error {
   border: 1px solid #ff000099;
   /*animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;*/
 }
-.modal__input-error:first-child {
+.modal__input_type_error:first-child {
   margin-bottom: 32px;
 }
 /* quality of life messing around if needed will 
@@ -162,11 +162,9 @@ comment out im just looking at somthing
 .modal__button-submit_error {
   opacity: 50%;
   animation: opacity 0.5s;
+  pointer-events: none;
 }
-.modal__button-submit:hover {
-  opacity: 80%;
-  cursor: pointer;
-}
+
 /*new area 2 - modal images */
 .modal__img-container {
   position: relative;

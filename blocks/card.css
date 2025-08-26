@@ -45,7 +45,7 @@
   background-repeat: no-repeat;
 }
 
-.card__like-button-active {
+.card__like-button_active {
   background-image: url(../images/heart2.svg);
   opacity: 1;
 }
@@ -55,7 +55,7 @@
   opacity: 100%;
 }
 
-.card__like-button-active:hover {
+.card__like-button_active:hover {
   cursor: pointer;
   opacity: 0.5;
 }
