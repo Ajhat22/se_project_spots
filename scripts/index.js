@@ -145,11 +145,11 @@ function closeModal(modal) {
 editProfileButton.addEventListener("click", function () {
   editProfileNameInput.value = nameHolder.textContent;
   editProfileDescriptionInput.value = descriptionHolder.textContent;
-  resetValidation(profileModal, [
-    editProfileNameInput,
-    editProfileDescriptionInput,
-    config,
-  ]);
+  resetValidation(
+    profileModal,
+    [editProfileNameInput, editProfileDescriptionInput],
+    config
+  );
   openModal(profileModal);
 });
 
